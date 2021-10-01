@@ -44,6 +44,7 @@ public class Doctor extends Auditable<String> implements Serializable {
 	private Long doctorId;
 	private String doctorName;
 	private String qualification;
+	private String hospitalName;
 
 	@OneToMany(targetEntity = DoctorSpecialization.class, cascade = CascadeType.ALL)
 	@JoinColumn(name = "doctor_Id", referencedColumnName = "doctorId", foreignKey = @ForeignKey(name = "fk_docId"))
